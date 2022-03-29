@@ -1,25 +1,25 @@
 
 	JMP start
-hello: DB "Hello World!" ; Variable
-       DB 0	; String terminator
+hello: DB "Hello World!"
+       DB 0
 
 start:
-	MOV C, hello    ; Point to var 
-	MOV D, 232	; Point to output
+	MOV C, hello
+	MOV D, 232
 	CALL print
-        HLT             ; Stop execution
+        HLT
 
-print:			; print(C:*from, D:*to)
+print:
 	PUSH A
 	PUSH B
 	MOV B, 0
 .loop:
-	MOV A, [C]	; Get char from var
-	MOV [D], A	; Write to output
+	MOV A, [C]
+	MOV [D], A
 	INC C
 	INC D  
-	CMP B, [C]	; Check if end
-	JNZ .loop	; jump if not
+	CMP B, [C]
+	JNZ .loop
 
 	POP B
 	POP A
