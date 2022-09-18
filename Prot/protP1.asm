@@ -1,7 +1,7 @@
 JMP start
 X:	DB 50
 start:
-	MOV A,0d ; insere 0 ao REG A
+	MOV A,0d ;
 	MOV D, 232
 loop:
 	CALL print
@@ -16,3 +16,4 @@ print:
 	MOV [D], 32d	
 	INC D
 	RET
+	
