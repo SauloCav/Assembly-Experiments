@@ -1,6 +1,6 @@
 JMP start
-num1: 	DB "32,4" ; Variable
-      	DB 0	; String terminator
+num1: 	DB "32,4" 
+      	DB 0	
 start:
 	MOV C, num1
 	MOV B, 0d
@@ -29,5 +29,3 @@ virgula:
 	MUL 18d
 	ADD B, A
 	HLT
-
-
