@@ -1,6 +1,6 @@
 JMP start
-hello: DB "Hello World!" ; Variable
-       DB 0	; String terminator
+hello: DB "Hello World!"
+       DB 0	
 
 start:
 	MOV C, hello 
@@ -28,3 +28,4 @@ retUpperCase:
 upperCase:
 	SUB A, 32d
 	JMP retUpperCase
+	
