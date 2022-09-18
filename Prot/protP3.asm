@@ -1,8 +1,8 @@
 JMP start
-num1: 	DB "11,7" ; Variable
-      	DB 0	; String terminator
-num2: 	DB "02,6" ; Variable
-	DB 0	; String terminator
+num1: 	DB "11,7" 
+      	DB 0	
+num2: 	DB "02,6" 
+	DB 0	
 start:
 	MOV C, num1
 	MOV D, num2
